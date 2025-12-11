@@ -43,8 +43,6 @@ func calc_from_input(input string) int {
 	dial_count := 50
 	splitted := strings.Split(input, "\n")
 	for _, v := range splitted {
-		normalize_count(&dial_count, &res)
-
 		num_str := build_num_from_str(v)
 		if v[0] == 'L' {
 			dial_count -= conv_to_num(num_str)
@@ -52,9 +50,9 @@ func calc_from_input(input string) int {
 		}
 
 		dial_count += conv_to_num(num_str)
-	}
 
-	normalize_count(&dial_count, &res)
+		normalize_count(&dial_count, &res)
+	}
 
 	return res
 }
