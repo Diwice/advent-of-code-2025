@@ -37,19 +37,6 @@ func parse_range(first, second int) ([]int, error) {
 			continue
 		}
 
-		/*max_slice := len(stringified) / 2
-		for ; max_slice > 0; max_slice-- {
-			if len(stringified) % max_slice != 0 {
-				continue
-			}
-			split_parts := split_to_parts(stringified, max_slice)
-			if are_equal(split_parts) {
-				fmt.Println(max_slice, "---", split_parts, "---", stringified)
-				res = append(res, i)
-				break
-			}
-		}*/
-
 		split_parts := split_to_parts(stringified, len(stringified)/2)
 		if are_equal(split_parts) {
 			res = append(res, i)
